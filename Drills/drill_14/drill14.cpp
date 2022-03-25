@@ -27,7 +27,7 @@ class B1
 public:
 	virtual void vf() { cout << "B1::vf()" << endl; }
 	void f() { cout << "B1::f()" << endl; }
-	virtual void pvf() = 0; //tisztan virtualis fuggveny
+	//virtual void pvf() = 0; //tisztan virtualis fuggveny
 };
 
 class D1 : public B1
@@ -62,14 +62,14 @@ public:
 	void pvf() { cout << n << endl;}
 };
 
-void (B2& bref) 
+void f(B2& bref) 
 {
 	bref.pvf();
 }
 
 int main()
 {
-	/*B1 b1;
+	B1 b1;
 	b1.vf();
 	b1.f();
 	
@@ -79,7 +79,7 @@ int main()
 	
 	B1& bref = d1;
 	bref.vf();
-	bref.f();*/
+	bref.f();
 	
 	D2 d2;
 	d2.vf();
@@ -94,7 +94,8 @@ int main()
 	d22.n = 22;
 	d22.pvf();
 	
-	f(d21); f(d22);
+	f(d21);
+	f(d22);
 }
 
 
