@@ -59,6 +59,7 @@ try {
 	
 	vector<int>::iterator vit;
 	vit = find(vi2.begin(), vi2.end(), 27);
+	
 	if(!vit = vi2.end() {
 		cout << "Found at: " << distance(vi2.begin(), vit) << endl;
 	}
@@ -67,6 +68,21 @@ try {
 		cout << "not found\n";
 	}
 	
+	//map
+	//k(ey) es v(alue) tipusu tomb
+	//a kulcsokhoz kulon ertekek tarsulnak
+	//kulcs-ertek parok
+	//map<k,v> m
+	//m["a"] = 1
+	//m["b"] = 2
+	//m["ab"] = 3
+	//		 1	 2	 3
+	//beszurasok: 	"a"	"b"	"ab"
+	//set: rendezett kulcsertekeket tartalmaz
+	//set<string> s; s["a"], s["b"], s["ab"], s["a"]
+	//ellenorziy hogy egyeni ertekeket tartalmazzon
+	
+		
 } catch(...) {
 	cerr << "unknown\n";
 }
