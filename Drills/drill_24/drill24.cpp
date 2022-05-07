@@ -59,8 +59,10 @@ try {
 		else cout << "sqrt(" << i << ") = "<< d << '\n';
 	}
 	
+	
 	cin.clear();
 	cin.ignore();
+	
 	/*cout << "\nEnter 10 floats: ";
 	Matrix<double> m(10);
 	double d2;
@@ -116,6 +118,26 @@ try {
 	cout << "sum: " << sum << '\n';
 	
 	//cout << m2 <<'\n';
+	
+	//8. feladat
+	
+	Matrix<int, 2> m(2,3);
+	cout << "Enter 6 values:";
+	for(Index i=0; i<m.dim1(); i++)
+	{
+		for(Index j=0; j<m.dim2(); j++)
+		{
+			cin >> m(i, j);
+		}
+	}
+	for(Index i=0; i<m.dim1(); i++)
+	{
+		for(Index j=0; j<m.dim2(); j++)
+		{
+			cout << m(i, j) << '\t';
+		}
+		cout << '\n';
+	}
 
 } catch(exception& e) {
 	cerr << "error: " << e.what() << '\n';
