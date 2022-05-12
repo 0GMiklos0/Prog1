@@ -65,7 +65,7 @@ try {
 	//Atlagnal kisebb szamok masolasa
 	
 	std::vector<double> vd2(vd.size());
-	std::copy_if(vd.begin(),vd.end(),);
+	std::copy_if(vd.begin(),vd.end(),vd2.begin(),[+](double d){return d < davg;});
 	
 	vd2.resize(std::distance(vd2.begin(), it));
 	std::sort(vd.begin(), vd.end());
