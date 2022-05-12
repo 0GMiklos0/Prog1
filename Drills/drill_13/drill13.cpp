@@ -9,7 +9,7 @@ using namespace Graph_lib;
 int main()
 	try {
 		Point t1 {300, 50};
-		Simple_window win(t1, 1000, 800, "My window");
+		Simple_window win{t1, 1000, 800, "My window"};
 		win.wait_for_button();
 		
 		int x_size=800;
@@ -25,27 +25,24 @@ int main()
 		win.attach(grid);
 		win.wait_for_button();
 		
-		Closed_polyline r;
-		
 		for(int i=0; i<700; i+=100)
 		{
-			r {Point{i, i}, i+100, i+100};
+			Rectangle r{Point{i, i}, i+100, i+100};
 			r.set_fill_color(Color::red);
 			win.attach(r);
-			
 		}
 		
-		Image i (Point{0, 0},GUI/badge.jpg);
+		Image i {Point{0, 0},"GUI/badge.jpg"};
 		i.set_mask(Point{0, 0}, 200, 200);
 		win.attach(i);
 		win.wait_for_button();
 		
-		Image img (Point{0, 0}, GUI/badge.jpg);
-		int i = 0;
-		while(i<4)
+		Image img {Point{0, 0}, "GUI/badge.jpg"};
+		int index = 0;
+		while(index<4)
 		{
-			i++;
-			img.set_mask(Point{i*200, i*100}, 100, 100);
+			index++;
+			img.set_mask(Point{index*200, index*100}, 100, 100);
 			win.attach(img);
 			win.wait_for_button();
 		}

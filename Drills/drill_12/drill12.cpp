@@ -69,7 +69,7 @@ int main()
 		win.wait_for_button();
 		
 		Text t {Point{150, 150}, "Hello, graphical world!"};
-		t.set_font(Font::times_bold);
+		t.set_font(FL_TIMES_BOLD);
 		t.set_font_size(20);
 		win.attach(t);
 		
@@ -84,7 +84,7 @@ int main()
 		win.wait_for_button();
 		
 		Circle c{Point{100, 50}, 50};
-		Eclipse e{Point{100, 50}, 75, 25};
+		Ellipse e{Point{100, 50}, 75, 25};
 		e.set_color(Color::dark_red);
 		Mark m {Point{100, 200}, 'x'};
 		win.attach(c);
